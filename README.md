@@ -18,18 +18,21 @@ This project explores two deep learning approaches for time-series modeling usin
 The objective is to understand, reproduce, organize, and improve these baseline implementations, and evaluate their performance through controlled benchmarking. 
 
 
-## Project Structure  
+## Project Structure
 
-│   README.md
+```
+project/
 │
-└───results/
+├── README.md
+│
+└── results/
     │
-    ├───Transformer_baseline/
+    ├── Transformer_baseline/
     │       test_results.txt
     │       transformer_accuracy.png
     │       transformer_loss.png
     │
-    ├───LSTM_baseline/
+    ├── LSTM_baseline/
     │       lstm_loss.png
     │       prediction_0.png
     │       prediction_1.png
@@ -38,9 +41,9 @@ The objective is to understand, reproduce, organize, and improve these baseline 
     │       prediction_4.png
     │       training_history.txt
     │
-    └───LSTM_Improvements/
+    └── LSTM_Improvements/
         │
-        ├───Improvement_1_LR_Scheduler/
+        ├── Improvement_1_LR_Scheduler/
         │       lstm_loss.png
         │       prediction_0.png
         │       prediction_1.png
@@ -49,11 +52,11 @@ The objective is to understand, reproduce, organize, and improve these baseline 
         │       prediction_4.png
         │       training_history.txt
         │
-        ├───Improvement_2_Dropout/
+        ├── Improvement_2_Dropout/
         │       lstm_loss.png
         │       training_history.txt
         │
-        └───Improvement_3_Stacked_LSTM/
+        └── Improvement_3_Stacked_LSTM/
                 lstm_loss.png
                 prediction_0.png
                 prediction_1.png
@@ -61,8 +64,7 @@ The objective is to understand, reproduce, organize, and improve these baseline 
                 prediction_3.png
                 prediction_4.png
                 training_history.txt
-
----
+```
 
 ## Datasets  
 
@@ -117,13 +119,14 @@ Transformer:
 **Validation Accuracy:** 49.2%  
 **Test Accuracy:** 51.6
 
-
 **Notes / Observations:**
-The model did not learn meaningful patterns from the FordA dataset.
-Training and validation accuracy remained near chance level throughout all epochs.
-Loss stayed near 0.693, consistent with a model that is effectively guessing.
-Validation accuracy plateaued early and fluctuated slightly but showed no improvement.
-This indicates under-fitting and suggests the need for model improvements (more heads, deeper Transformer blocks, higher learning rate, etc.).
+
+- The model did not learn meaningful patterns from the FordA dataset.
+- Training and validation accuracy remained near chance level (~50%) across all epochs.
+- Loss stayed approximately constant around 0.693, indicating random guessing behaviour.
+- Validation accuracy plateaued early with minor fluctuations but no sustained improvement.
+- Overall performance indicates clear under-fitting.
+
 
 LSTM:
 **Training Loss:** 0.09998788684606552  
