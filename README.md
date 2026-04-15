@@ -64,6 +64,7 @@ project/
                 prediction_3.png
                 prediction_4.png
                 training_history.txt
+                
 ```
 
 ## Datasets  
@@ -73,6 +74,9 @@ project/
 - Input: time-series signals  
 - Output: class labels  
 - Task: classify signals into two categories  
+- Keras Example:  
+  https://keras.io/examples/timeseries/timeseries_classification_transformer/
+
 
 ---
 
@@ -81,6 +85,9 @@ project/
 - Input: historical weather measurements  
 - Output: future temperature prediction  
 - Task: predict future values based on past observations  
+- Keras Example:  
+  https://keras.io/examples/timeseries/timeseries_weather_forecasting/ 
+
 
 ---
 
@@ -111,6 +118,8 @@ Both Keras examples were executed successfully:
 - Models were trained using default configurations  
 - Training and validation metrics were recorded  
 - Observations were made regarding performance and training behavior  
+
+All baseline experiments were executed using the official Keras Colab notebooks linked above, without code modifications other than result saving and visualization.
 
 ### Observations  
 
