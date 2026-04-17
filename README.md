@@ -207,6 +207,13 @@ Objective: Improve convergence stability during training.
 
 Added ReduceLROnPlateau callback to dynamically reduce learning rate when validation loss plateaus.
 
+Steps:
+
+- Start from the baseline LSTM notebook
+- Add a learning rate scheduler callback
+- Train using the same number of epochs
+- Save training history and prediction plots
+
 ### Results
 
 | Metric                     | Baseline LSTM        | Experiment 1 (LR Scheduler) |
@@ -232,6 +239,13 @@ The adaptive learning rate allowed the optimizer to escape a plateau and refine 
 Objective: Reduce overfitting and improve generalization.
 
 Increased dropout rate in LSTM layers and introduced recurrent dropout to regularise training.
+
+Steps:
+
+- Modify LSTM layers to include dropout parameters
+- Keep all other training parameters unchanged
+- Train and evaluate the model
+- Record MSE and MAE
 
 ### Results
 
@@ -270,6 +284,12 @@ Objective: Evaluate the impact of increased model capacity on temporal feature l
 Instead of simply increasing the number of hidden units, the architecture was modified by stacking two LSTM layers (64 → 32 units). This allows the model to learn hierarchical temporal representations:
 - The first layer captures low-level temporal patterns
 - The second layer refines higher-level dependencies
+
+Steps:
+- Update the model architecture to include multiple LSTM layers
+- Train using the same dataset split
+- Monitor for overfitting
+- Save loss curves and forecast plots
 
 ### Results
 
