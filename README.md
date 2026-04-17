@@ -17,7 +17,49 @@ This project explores two deep learning approaches for time-series modeling usin
 
 The objective is to understand, reproduce, organize, and improve these baseline implementations, and evaluate their performance through controlled benchmarking. 
 
+---
 
+## Requirements
+
+The experiments in this repository rely on standard Python machine learning libraries and official Keras implementations.
+
+### Software Requirements
+- Python ≥ 3.8  
+- TensorFlow ≥ 2.10  
+- Keras (included with TensorFlow)  
+- NumPy  
+- Pandas  
+- Matplotlib  
+
+### Recommended Execution Environment
+- Google Colab (used for all baseline experiments), or  
+- Local machine with optional GPU acceleration (CUDA-compatible GPU recommended but not required)
+
+---
+
+## Setup and Installation
+
+### Option 1: Google Colab (Recommended)
+
+The experiments can be reproduced directly using the official Keras example notebooks:
+
+- Transformer Time-Series Classification:  
+  https://keras.io/examples/timeseries/timeseries_classification_transformer/
+
+- LSTM Time-Series Forecasting:  
+  https://keras.io/examples/timeseries/timeseries_weather_forecasting/
+
+No local installation is required when using Google Colab.
+
+---
+
+### Option 2: Local Environment Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   cd your-repo-name
+   
 ## Project Structure
 
 ```
@@ -74,9 +116,6 @@ project/
 - Input: time-series signals  
 - Output: class labels  
 - Task: classify signals into two categories  
-- Keras Example:  
-  https://keras.io/examples/timeseries/timeseries_classification_transformer/
-
 
 ---
 
@@ -84,10 +123,7 @@ project/
 - Multivariate time-series dataset  
 - Input: historical weather measurements  
 - Output: future temperature prediction  
-- Task: predict future values based on past observations  
-- Keras Example:  
-  https://keras.io/examples/timeseries/timeseries_weather_forecasting/ 
-
+- Task: predict future values based on past observations 
 
 ---
 
